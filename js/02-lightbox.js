@@ -5,8 +5,7 @@ const galleryElem = document.querySelector('.gallery');
 
 galleryElem.addEventListener( 'click', e => {
     e.preventDefault();
-},
-    false);
+}, false);
 
 
 function galleryPattern(){
@@ -25,7 +24,10 @@ function galleryPattern(){
 galleryPattern();
 
 
-const lightbox = new SimpleLightbox('.gallery a', { captionsData : "alt", captionDelay : 250});
+const lightbox = new SimpleLightbox('.gallery a', {
+        captionData: "alt",
+        captionDelay: 250
+    });
 lightbox.on("show.simplelightbox");
 
 console.log(galleryItems);
