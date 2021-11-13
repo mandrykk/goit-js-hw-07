@@ -13,13 +13,9 @@ function galleryPattern(){
     const markup = galleryItems
     .map(
         ({preview, original, description}) => 
-        `<li>
-            <div class="gallery__item">
-                <a class="gallery__item" href="${original}">
-                    <img class="gallery__image" src="${preview}" alt="${description}"/>
-                </a>
-            </div>
-        </li>`
+        `<a class="gallery__item" href="${original}">
+             <img class="gallery__image" src="${preview}" alt="${description}" />
+        </a>`
     )
     .join("");
     galleryElem.insertAdjacentHTML('beforeend', markup);
